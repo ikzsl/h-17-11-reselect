@@ -6,7 +6,10 @@ import * as actions from '../actions/index.js';
 import { filteredTasksSelector } from '../selectors/index.js';
 
 // BEGIN (write your solution here)
-
+const mapStateToProps = (state) => {
+  const tasks = filteredTasksSelector(state);
+  return { tasks };
+};
 // END
 
 const actionCreators = {
